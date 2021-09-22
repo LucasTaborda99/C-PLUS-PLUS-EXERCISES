@@ -1,2 +1,2 @@
-# C-Plus-Plus_Exercises
+# C-PLUS-PLUS-EXERCISES
 Exercícios de C++
