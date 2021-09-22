@@ -4,7 +4,6 @@
 #include <iostream>
 
 using namespace std;
-
 int main(){
 	
 	setlocale(LC_ALL,"Portuguese");
@@ -12,50 +11,53 @@ int main(){
 	float num1 = 0, num2 = 0, resultado = 0, resultado2 = 0;
 	string oper_digitado;
 
-	cout << "----------------Calculadora--------------\n";
-	
+	cout << endl << "----------------Calculadora--------------\n";
+
 	cout << endl << "Digite o primeiro número: ";
 	cin >> num1;
-	
+
+	if(num1 != 0){
+		} else{
+			cout << endl << "Por favor digite um número maior que zero\n";
+			return 0;
+		}
+
 	cout << endl << "Digite o segundo número: ";
 	cin >> num2;
-	
+
+	if(num2 != 0){
+	} else {
+		cout << endl << "Por favor digite um número maior que zero\n";
+	}
 	cout << endl << "Digite a operação que você deseja efetuar, conforme o exemplo, sem parênteses: (+), (-), (/) ou (*): ";
 	cin >> oper_digitado;
 	
 	if(oper_digitado == "+"){
-		
 		resultado=num1+num2;
 		
 	}
 	else if(oper_digitado == "-"){
-		
 		resultado=num1-num2;
 		
 	}
 	else if(oper_digitado == "/"){
-		
 		resultado=num1/num2;
-	
 	}
-	else if (oper_digitado == "*"){
-
-		resultado=num1*num2;
 	
+	else if (oper_digitado == "*"){
+		resultado=num1*num2;
+
 	} else {
 		cout << endl << "Por favor digite a operação desejada conforme o exemplo\n";
 	}
-	
+
 	if(resultado < 0){
-		
 		resultado2 = resultado * -1;
-		
 		cout << endl << "O resultado é: " << resultado2;
 	}
 	else{
 		cout << endl << "O resultado é: " << resultado;
 	}
-	
 
 	return 0;
 }
